@@ -3,6 +3,9 @@
 # Clean up cluster
 #
 
+- name: Exit playbook
+  meta: end_play
+
 - name: Check if a cluster is running
   stat:
     path: "{{ ansible_user_dir }}/{{ dynamic_deploy_path }}/metadata.json"
